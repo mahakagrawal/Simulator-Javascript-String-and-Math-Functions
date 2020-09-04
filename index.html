@@ -1,109 +1,70 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Simulator</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<script type="text/javascript">
-		function isNumber(evt) {
-             evt = (evt) ? evt : window.event;
-             var charCode = (evt.which) ? evt.which : evt.keyCode;
-             if (charCode > 31 && (charCode < 48 || charCode > 57)) {
-                 return false;
-             }
-             return true;
+	<title>Animation</title>
+	<style type="text/css">
+		#leftbox{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            position: relative;
+            animation: leftbox 4s infinite;
         }
-	</script>
+        #rightbox{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            position: relative;
+            animation: rightbox 4s infinite;
+        }
+        @keyframes leftbox {
+           from {left: 0px;}
+           to {left: 200px;}
+        }
+        @keyframes rightbox {
+           from {left: 299px;}
+           to {left: 99px;}
+        }
+        #topbox{
+            width: 100px;
+            height: 100px;
+            left: 150px;
+            border: 1px solid black;
+            position: relative;
+            animation: topbox 4s infinite;
+        }
+        #bottombox{
+            width: 100px;
+            height: 100px;
+            left: 150px;
+            border: 1px solid black;
+            position: relative;
+            animation: bottombox 4s infinite;
+        }
+        @keyframes topbox {
+           from {top: 0px;}
+           to {top: 200px;}
+        }
+        @keyframes bottombox {
+           from {top: 299px;}
+           to {top: 99px;}
+        }
+	</style>
 </head>
 <body>
-    <section>
-    	<div class="header">
-    		<label>Fibonacci Series</label>
-    	</div>
-    	<div class="container">
-    		<div class="input-box">
-    			<div class="input-titlebox">
-    				<label>Input Box</label>
-    			</div>
-    			<div class="input-area">
-    				<div class="label">
-    				    <label>Enter No. Of Elements</label>
-    				</div>
-    				<input type="text" name="n" id="num" onkeypress="return isNumber(event)" placeholder="enter number of elements"><br>
-    				<div class="button-area">
-    					<button class="button" id="start" onclick="start()" style="display: block;">Start</button>
-    					<button class="button" id="next" onclick="next()" style="display: none;">Next</button>
-    					<button class="button" id="reset" onclick="reset()" style="display: none;">Reset</button>
-    			    </div>
-    			</div>
-    		</div>
-    		<div class="logic-box">
-    			<div class="logic-titlebox">
-    				<label>Logic Box</label>
-    			</div>
-    			<div id="logic" class="logic-area" style="display: none;">
-    				<pre>#include&lt;stdio.h&gt; 
-int fib(int n) 
-{ 
-   if (n <= 1) 
-      return n; 
-   return fib(n-1) + fib(n-2); 
-} 
-  
-int main () 
-{ 
-  int n ; 
-  scanf("%d",&n);
-  printf("%d", fib(n)); 
-  return 0; 
-} 
-    				</pre>
-    		    </div>
-    		</div>
-    		<div class="output-box">
-    			<div class="output-titlebox">
-    				<label>Output Box</label>
-    			</div>
-    			<div class="output-area" id="output">
-    				
-    			</div>
-    		</div>
-    	</div>
-    </section>
-    <script type="text/javascript">
-    	window.start = function(){
-    		document.getElementById("start").style ="display:none";
-    		document.getElementById("next").style ="display:block";
-    		document.getElementById('logic').style="display:block";
-    		window.num = document.getElementById("num").value;
-    		document.getElementById("num").disabled= true;
-    	}
-    	window.next = function(){
-    		document.getElementById("next").style ="display:none";
-    		document.getElementById("reset").style ="display:block";
-    		document.getElementById('logic').style="color:green";
-    		n = window.num;
-    		var fibonacci_series = function fib (n) {
-               if (n < 1) {
-                  return ['No Output'];   
-               }
-               if (n < 3) {
-                  return [0, 1];
-               }
-
-               var a = fib(n - 1);
-               a.push(a[n - 2] + a[n - 3]);
-               return a;
-            };
-            document.getElementById("output").innerHTML = fibonacci_series(n);
-    	}
-    	window.reset = function(){
-    		document.getElementById("reset").style ="display:none";
-    		document.getElementById("start").style ="display:block";
-    		document.getElementById('logic').style="display:none";
-    		document.getElementById('output').innerHTML="";
-    		document.getElementById("num").disabled = false;
-    		document.getElementById("num").value="";
-    	}
-    </script>
+	<div style="display: flex; width: 100%;flex-direction: row;">
+	<div style="width: 50%; border:1px solid black; height: 600px;">
+        <center><h1>Horizantal</h1></center>
+        <div style="display: flex;">
+            <div id="leftbox"></div>
+            <div id="rightbox"></div>
+        </div>
+    </div>
+    <div style="width: 50%; border:1px solid black; height: 600px;">
+        <center><h1>Vertical</h1></center>
+            <div id="topbox"></div>
+            <div id="bottombox"></div>
+    </div>
+    </div>
 </body>
 </html>
