@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animation</title>
+	<style type="text/css">
+		#leftbox{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            position: relative;
+            animation: leftbox 4s infinite;
+        }
+        #rightbox{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            position: relative;
+            animation: rightbox 4s infinite;
+        }
+        @keyframes leftbox {
+           from {left: 0px;}
+           to {left: 200px;}
+        }
+        @keyframes rightbox {
+           from {left: 299px;}
+           to {left: 99px;}
+        }
+        #topbox{
+            width: 100px;
+            height: 100px;
+            left: 150px;
+            border: 1px solid black;
+            position: relative;
+            animation: topbox 4s infinite;
+        }
+        #bottombox{
+            width: 100px;
+            height: 100px;
+            left: 150px;
+            border: 1px solid black;
+            position: relative;
+            animation: bottombox 4s infinite;
+        }
+        @keyframes topbox {
+           from {top: 0px;}
+           to {top: 200px;}
+        }
+        @keyframes bottombox {
+           from {top: 299px;}
+           to {top: 99px;}
+        }
+	</style>
+</head>
+<body>
+	<div style="display: flex; width: 100%;flex-direction: row;">
+	<div style="width: 50%; border:1px solid black; height: 600px;">
+        <center><h1>Horizantal</h1></center>
+        <div style="display: flex;">
+            <div id="leftbox"></div>
+            <div id="rightbox"></div>
+        </div>
+    </div>
+    <div style="width: 50%; border:1px solid black; height: 600px;">
+        <center><h1>Vertical</h1></center>
+            <div id="topbox"></div>
+            <div id="bottombox"></div>
+    </div>
+    </div>
+</body>
+</html>

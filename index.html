@@ -1,70 +1,146 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Animation</title>
-	<style type="text/css">
-		#leftbox{
-            width: 100px;
-            height: 100px;
-            border: 1px solid black;
-            position: relative;
-            animation: leftbox 4s infinite;
-        }
-        #rightbox{
-            width: 100px;
-            height: 100px;
-            border: 1px solid black;
-            position: relative;
-            animation: rightbox 4s infinite;
-        }
-        @keyframes leftbox {
-           from {left: 0px;}
-           to {left: 200px;}
-        }
-        @keyframes rightbox {
-           from {left: 299px;}
-           to {left: 99px;}
-        }
-        #topbox{
-            width: 100px;
-            height: 100px;
-            left: 150px;
-            border: 1px solid black;
-            position: relative;
-            animation: topbox 4s infinite;
-        }
-        #bottombox{
-            width: 100px;
-            height: 100px;
-            left: 150px;
-            border: 1px solid black;
-            position: relative;
-            animation: bottombox 4s infinite;
-        }
-        @keyframes topbox {
-           from {top: 0px;}
-           to {top: 200px;}
-        }
-        @keyframes bottombox {
-           from {top: 299px;}
-           to {top: 99px;}
-        }
-	</style>
+	<title>Predefined String &amp; Maths Funtions</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 </head>
 <body>
-	<div style="display: flex; width: 100%;flex-direction: row;">
-	<div style="width: 50%; border:1px solid black; height: 600px;">
-        <center><h1>Horizantal</h1></center>
-        <div style="display: flex;">
-            <div id="leftbox"></div>
-            <div id="rightbox"></div>
+    <!-- Header -->
+	<section class="header" style="display:none;">
+        <div class="headerstring" style="display: none;text-align: center;">
+    	    <h2>Predefined String Functions of Javascript</h2>
         </div>
-    </div>
-    <div style="width: 50%; border:1px solid black; height: 600px;">
-        <center><h1>Vertical</h1></center>
-            <div id="topbox"></div>
-            <div id="bottombox"></div>
-    </div>
-    </div>
+        <div class="headermaths" style="display: none;text-align: center;">
+    	    <h2>Predefined Maths Functions of Javascript</h2>
+        </div>
+    </section>
+    <!--Header-->
+    <!-- First Page -->
+    <section class="FirstPage" id="firstpage">
+        <div class="headeropen" style="text-align: center;">
+    	    <h2>Select the operation, you want to perform first!!</h2>
+        </div>
+        <section class="opening-section">
+    	   <div class="selection">
+    		    <div class="choices" align="center">
+    			    <button class="string-choice" onclick="secondstring()">
+    				    <h1>String Functions</h1>
+    			    </button><br><br>
+    			    <button class="math-choice" onclick="secondmath()">
+    				    <h1>Maths Functions</h1>
+    		    	</button>
+    		    </div>
+    	    </div>
+        </section>
+    </section>
+    <!-- End First Page -->
+    <!-- Second String Page -->
+    <section class="MathSecondPage" id="mathpage" style="display:none;">
+        <div class="headeropen" style="text-align: center;">
+            <h2>Select the operation, you want to perform first!!</h2>
+        </div>
+        <section class="math-opening-section">
+           <div class="math-selection">
+                <div class="choices1" align="center">
+                    <button class="math-choice1">
+                        <h2>round()</h2>
+                    </button>
+                    <button class="math-choice1">
+                        <h2>sqrt()</h2>
+                    </button>
+                    <button class="math-choice1">
+                        <h2>abs()</h2>
+                    </button>
+                    <button class="math-choice1">
+                        <h2>ceil()</h2>
+                    </button>
+                    <button class="math-choice1">
+                        <h2>floor()</h2>
+                    </button>
+                    <button class="math-choice1">
+                        <h2>min()</h2>
+                    </button>
+                    <button class="math-choice1">
+                        <h2>max()</h2>
+                    </button>
+                    <button class="math-choice1">
+                        <h2>random()</h2>
+                    </button>
+                    <button class="math-choice1">
+                        <h2>pow()</h2>
+                    </button>
+                </div>
+            </div>
+            <div align="center" style="padding-bottom: 50px;padding-top: 20px;">
+                <button style="color:white; background-color: red;padding-top:15px;width:200px;height:40px;padding-bottom: 25px;" onclick="gotofirstfrommath()"> Go To Previous Page</button>
+            </div>
+        </section>
+    </section>
+
+    <!-- End Second String Page -->
+    <!-- Second Math Page-->
+    <section class="StringSecondPage" id="stringpage" style="display:none;">
+        <div class="headeropen" style="text-align: center;">
+            <h2>Select the operation, you want to perform first!!</h2>
+        </div>
+        <section class="string-opening-section">
+           <div class="string-selection">
+                <div class="choices2" align="center">
+                    <button class="string-choice1">
+                        <h2>chatAt()</h2>
+                    </button>
+                    <button class="string-choice1">
+                        <h2>charCodeAt()</h2>
+                    </button>
+                    <button class="string-choice1">
+                        <h2>concat()</h2>
+                    </button>
+                    <button class="string-choice1">
+                        <h2>indexOf()</h2>
+                    </button>
+                    <button class="string-choice1">
+                        <h2>repeat()</h2>
+                    </button>
+                    <button class="string-choice1">
+                        <h2>toLowerCase()</h2>
+                    </button>
+                    <button class="string-choice1">
+                        <h2>toUpperCase()</h2>
+                    </button>
+                    <button class="string-choice1">
+                        <h2>valueOf()</h2>
+                    </button>
+                    <button class="string-choice1">
+                        <h2>trim()</h2>
+                    </button>
+                </div>
+            </div>
+            <div align="center" style="padding-bottom: 50px;padding-top: 20px;">
+                <button style="color:white; background-color: red;padding-top:15px;width:200px;height:40px;padding-bottom: 25px;" onclick="gotofirstfromstring()"> Go To Previous Page</button>
+            </div>
+        </section>
+    </section>
+    <!-- End Second Math Page -->
+    <script type="text/javascript">
+        window.secondmath = function(){
+            document.getElementById('firstpage').style='display:none';
+            document.getElementById('mathpage').style='display:block';
+        }
+        window.secondstring = function(){
+            document.getElementById('firstpage').style='display:none';
+            document.getElementById('stringpage').style='display:block';
+        }
+        window.gotofirstfromstring = function(){
+            document.getElementById('stringpage').style='display:none';
+            document.getElementById('firstpage').style='display:block';
+        }
+        window.gotofirstfrommath = function(){
+            document.getElementById('mathpage').style='display:none';
+            document.getElementById('firstpage').style='display:block';
+        }
+    </script>
 </body>
 </html>

@@ -1,0 +1,214 @@
+/*{
+	margin: 0px;
+	padding: 0px;
+}
+.header{
+	width: 100%;
+	background-color: blue;
+	color: white;
+	text-align: center;
+	line-height: 1;
+	box-sizing: border-box;
+	text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+    border-color: #3072b3;
+    border-bottom-color: #2a65a0;
+    color: #fff;
+    background-color: #3c8dde;
+    background-image: linear-gradient(#599bdc, #3072b3);
+    font-size: 4vh;
+    padding: 20px;
+}
+.container{
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+.input-box{
+	width: 25%;
+	height: 550px;
+	box-sizing: border-box;
+	border: 1px solid grey;
+	border-radius: 5px;
+	margin-top: 25px;
+	margin-right: 25px;
+	margin-left: 50px;
+	display: block;
+	
+}
+.logic-box{
+	width: 30%;
+	height: 550px;
+	box-sizing: border-box;
+	border: 1px solid grey;
+	border-radius: 5px;
+	margin-top: 25px;
+	margin-right: 25px;
+	margin-left: 25px;
+	display: block;
+	
+}
+.output-box{
+	width: 35%;
+	height: 550px;
+	box-sizing: border-box;
+	border: 1px solid grey;
+	border-radius: 5px;
+	margin-top: 25px;
+	margin-right: 50px;
+	margin-left: 25px;
+	display: block;
+	
+}
+.input-titlebox, .logic-titlebox, .output-titlebox{
+	text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+    border-color: #3072b3;
+    border-bottom-color: #2a65a0;
+    color: #fff;
+    background-color: #3c8dde;
+    background-image: linear-gradient(#599bdc, #3072b3);
+    font-size: 18px;
+    padding:12px;
+    text-align: center;
+
+}
+.input-area{
+	width: 100%;
+	padding-top: 25px;
+	text-align: center;
+	font-size: 20px;
+}
+.label{
+	padding-bottom: 20px;
+}
+input{
+	width: 80%;
+	height:25px;
+}
+button{
+	width: 100%;
+	text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+    border-color: #3072b3;
+    border-bottom-color: #2a65a0;
+    color: #fff;
+    background-color: #3c8dde;
+    background-image: linear-gradient(#599bdc, #3072b3);
+    font-size: 12px;
+    padding:5px;
+    text-align: center;
+}
+.button-area{
+	padding: 20px;
+	line-height: 1;
+}
+.logic-area,.output-area{
+	padding: 25px;
+    font-size: 18px;
+    color:red;
+}
+pre{
+	white-space: pre-wrap;
+	font-weight: 405;
+	font-family: Overpass, Helvetica, sans-serif;
+}
+.output-area{
+	overflow-wrap: break-word;
+	line-height: 1.5;
+}*/
+*{
+	        margin: 0px;
+	        padding: 0px;
+         }
+        .header{
+	        width: 100%;
+	        background-color: red;
+	        color: white;
+	        text-align: center;
+	        line-height: 1;
+	        box-sizing: border-box;
+	        text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+            border-color: #fd2727;
+            border-bottom-color: #ff3a3a;
+            color: #fff;
+            background-color: #f10228;
+            background-image: linear-gradient(#ff3230, #ca2525);
+            font-size: 4vh;
+            padding: 20px;
+        }
+.container{
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+.logic-box{
+	width: 30%;
+	height: 550px;
+	box-sizing: border-box;
+	border: 1px solid red;
+	border-radius: 5px;
+	margin-top: 25px;
+	margin-right: 5px;
+	margin-left: 50px;
+	display: block;
+	
+}
+.output-box{
+	width: 70%;
+	height: 550px;
+	box-sizing: border-box;
+	border: 1px solid red;
+	border-radius: 5px;
+	margin-top: 25px;
+	margin-right: 50px;
+	margin-left: 15px;
+	display: block;
+	
+}
+.logic-titlebox{
+	text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+    border-color: #3072b3;
+    border-bottom-color: #2a65a0;
+    color: #fff;
+    background-color: #f10228;
+    background-image: linear-gradient(#ff3230, #ca2525);
+    font-size: 18px;
+    padding:12px;
+    text-align: center;
+
+}
+.label{
+	padding-bottom: 20px;
+}
+input{
+	width: 80%;
+	height:25px;
+}
+button{
+	width: 100%;
+	text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+    border-color: #3072b3;
+    border-bottom-color: #2a65a0;
+    color: #fff;
+    background-color: #3c8dde;
+    background-image: linear-gradient(#599bdc, #3072b3);
+    font-size: 12px;
+    padding:5px;
+    text-align: center;
+}
+.button-area{
+	padding: 20px;
+	line-height: 1;
+}
+.logic-area,.output-area{
+	padding: 25px;
+    font-size: 18px;
+    color:red;
+}
+pre{
+	white-space: pre-wrap;
+	font-weight: 405;
+	font-family: Overpass, Helvetica, sans-serif;
+}
+.output-area{
+	overflow-wrap: break-word;
+	line-height: 1.5;
+}
