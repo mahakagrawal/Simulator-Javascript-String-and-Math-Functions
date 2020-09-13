@@ -2,10 +2,11 @@
 <html>
 <head>
 	<title>Predefined String &amp; Maths Funtions</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="simulator.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -45,32 +46,32 @@
         <section class="math-opening-section">
            <div class="math-selection">
                 <div class="choices1" align="center">
-                    <button class="math-choice1">
+                    <button class="math-choice1" onclick="mathrounds()">
                         <h2>round()</h2>
                     </button>
-                    <button class="math-choice1">
+                    <button class="math-choice1" onclick="mathsqrt()">
                         <h2>sqrt()</h2>
                     </button>
-                    <button class="math-choice1">
+                    <button class="math-choice1" onclick="mathabs()">
                         <h2>abs()</h2>
                     </button>
-                    <button class="math-choice1">
+                    <button class="math-choice1" onclick="mathceil()">
                         <h2>ceil()</h2>
                     </button>
-                    <button class="math-choice1">
+                    <button class="math-choice1" onclick="mathfloor()">
                         <h2>floor()</h2>
                     </button>
-                    <button class="math-choice1">
-                        <h2>min()</h2>
+                    <button class="math-choice1" onclick="mathsin()">
+                        <h2>sin()</h2>
                     </button>
-                    <button class="math-choice1">
-                        <h2>max()</h2>
+                    <button class="math-choice1" onclick="mathcos()">
+                        <h2>cos()</h2>
                     </button>
-                    <button class="math-choice1">
-                        <h2>random()</h2>
+                    <button class="math-choice1" onclick="mathexp()">
+                        <h2>exp()</h2>
                     </button>
-                    <button class="math-choice1">
-                        <h2>pow()</h2>
+                    <button class="math-choice1" onclick="mathtrunc()">
+                        <h2>trunc()</h2>
                     </button>
                 </div>
             </div>
@@ -123,24 +124,561 @@
             </div>
         </section>
     </section>
-    <!-- End Second Math Page -->
-    <script type="text/javascript">
-        window.secondmath = function(){
-            document.getElementById('firstpage').style='display:none';
-            document.getElementById('mathpage').style='display:block';
-        }
-        window.secondstring = function(){
-            document.getElementById('firstpage').style='display:none';
-            document.getElementById('stringpage').style='display:block';
-        }
-        window.gotofirstfromstring = function(){
-            document.getElementById('stringpage').style='display:none';
-            document.getElementById('firstpage').style='display:block';
-        }
-        window.gotofirstfrommath = function(){
-            document.getElementById('mathpage').style='display:none';
-            document.getElementById('firstpage').style='display:block';
-        }
-    </script>
+<!-- Math.Round() Start -->
+    <section id="mathround" style="display: none;">
+        <div class="head">Predefined Javascript Functions --> Round()</div>
+        <div class="expl">
+            <button class="btn" id="define" type="button" name="button" onclick="definition()">Definition</button>
+            <button class="btn" id="syntax" type="button" name="button" onclick="syntax()">Syntax</button>
+            <div class="defi-para">The round() method rounds a number to the nearest integer.</div>
+            <div class="syntax-para">Math.round(x)</div>
+        </div>
+        <div class="cont">
+            <div class="one" align="center">
+                <div class="head">Input</div>
+                <div id="btnbox">
+                    <button class="btn2" onclick="start()">Start</button>
+                </div>
+                <div class="inputbox" id="inputbox" style="display: none;">
+                <label class="label1"><b>Enter Number</b></label><br><br><input type="text" name="text" placeholder="Enter Number" class="entry" id="entry"><br>
+                <div class="button">
+                    <button class="btn1" id="roundnextbtn" onclick="roundnext()">Next</button>
+                    <button class="btn1" id="roundresetbtn" onclick="roundreset()">Reset</button>
+                </div>
+               </div>
+            </div>
+            <div class="two">
+                <div class="head">Output</div>
+                <div id="output">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="input" >
+            <div class="head">Logic</div>
+            <div class="code" id="logicbox" style="display: none;">
+                    <code style="color: blue;">
+                        <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;</pre>
+<pre id="step1" class="red">&lt;input type="text" id="number"&gt;
+&lt;button onclick=" myFunction() "&gt; Next &lt;/button&gt; </pre>
+
+<pre id="step6">&lt;p id="output"&gt;&lt;/p&gt;</pre>
+
+<pre id="step2">&lt;script&gt;
+  function myFunction() {</pre>
+<pre id="step4">    n= document.getElementById("number").value</pre>
+<pre id="step5">    document.getElementById("output").innerHTML = Math.round(n);</pre>
+<pre id="step3">  }
+&lt;/script&gt;</pre>
+<pre>&lt;/body&gt;
+&lt;/html&gt;</pre>
+                        </pre>
+                    </code>
+                </div>
+        </div>
+        <div align="center" style="padding-bottom: 50px;padding-top: 20px;">
+                <button style="color:white; background-image:linear-gradient(#599bdc, #3072b3);padding-top:15px;width:200px;height:40px;padding-bottom: 25px;" onclick="gotosecondfrommath()">Try Another Function</button>
+            </div>
+    </section>
+<!-- End of Math.Round() -->
+
+<!-- Math.sqrt() Start -->
+
+<section id="mathsqrt" style="display: none;">
+        <div class="head">Predefined Javascript Functions --> sqrt()</div>
+        <div class="expl">
+            <button class="btn" id="sqrtdefine" type="button" name="button" onclick="sqrtdefinition()">Definition</button>
+            <button class="btn" id="sqrtsyntax" type="button" name="button" onclick="sqrtsyntax()">Syntax</button>
+            <div class="defi-para" id="sqrtdefi-para">The sqrt() method returns the square root of a number. If x is a negative number, NaN is returned</div>
+            <div class="syntax-para" id="sqrtsyntax-para">Math.sqrt(x)</div>
+        </div>
+        <div class="cont">
+            <div class="one" align="center">
+                <div class="head">Input</div>
+                <div id="sqrtbtnbox">
+                    <button class="btn2" onclick="sqrtstart()">Start</button>
+                </div>
+                <div class="inputbox" id="sqrtinputbox" style="display: none;">
+                <label class="label1"><b>Enter Number</b></label><br><br><input type="text" name="text" placeholder="Enter Number" class="entry" id="sqrtentry"><br>
+                <div class="button">
+                    <button class="btn1" id="sqrtnextbtn" onclick="sqrtnext()">Next</button>
+                    <button class="btn1" id="sqrtresetbtn" onclick="sqrtreset()">Reset</button>
+                </div>
+               </div>
+            </div>
+            <div class="two">
+                <div class="head">Output</div>
+                <div id="sqrtoutput">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="input" >
+            <div class="head">Logic</div>
+            <div class="code" id="sqrtlogicbox" style="display: none;">
+                    <code style="color: blue;">
+                        <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;</pre>
+<pre id="sqrtstep1" class="red">&lt;input type="text" id="number"&gt;
+&lt;button onclick=" myFunction() "&gt; Next &lt;/button&gt; </pre>
+
+<pre id="sqrtstep6">&lt;p id="output"&gt;&lt;/p&gt;</pre>
+
+<pre id="sqrtstep2">&lt;script&gt;
+  function myFunction() {</pre>
+<pre id="sqrtstep4">    n= document.getElementById("number").value</pre>
+<pre id="sqrtstep5">    document.getElementById("output").innerHTML = Math.sqrt(n);</pre>
+<pre id="sqrtstep3">  }
+&lt;/script&gt;</pre>
+<pre>&lt;/body&gt;
+&lt;/html&gt;</pre>
+                        </pre>
+                    </code>
+                </div>
+        </div>
+        <div align="center" style="padding-bottom: 50px;padding-top: 20px;">
+                <button style="color:white; background-image:linear-gradient(#599bdc, #3072b3);padding-top:15px;width:200px;height:40px;padding-bottom: 25px;" onclick="gotosecondfrommath()">Try Another Function</button>
+            </div>
+    </section>
+
+<!-- End of Math.sqrt() -->
+
+
+<!-- Math.abs() Start -->
+
+<section id="mathabs" style="display: none;">
+        <div class="head">Predefined Javascript Functions --> abs()</div>
+        <div class="expl">
+            <button class="btn" id="absdefine" type="button" name="button" onclick="absdefinition()">Definition</button>
+            <button class="btn" id="abssyntax" type="button" name="button" onclick="abssyntax()">Syntax</button>
+            <div class="defi-para" id="absdefi-para">The abs() method returns the absolute value of a number. It returns NaN if the value is not a number, or 0 if the value is null.</div>
+            <div class="syntax-para" id="abssyntax-para">Math.abs(x)</div>
+        </div>
+        <div class="cont">
+            <div class="one" align="center">
+                <div class="head">Input</div>
+                <div id="absbtnbox">
+                    <button class="btn2" onclick="absstart()">Start</button>
+                </div>
+                <div class="inputbox" id="absinputbox" style="display: none;">
+                <label class="label1"><b>Enter Number</b></label><br><br><input type="text" name="text" placeholder="Enter Number" class="entry" id="absentry"><br>
+                <div class="button">
+                    <button class="btn1" id="absnextbtn" onclick="absnext()">Next</button>
+                    <button class="btn1" id="absresetbtn" onclick="absreset()">Reset</button>
+                </div>
+               </div>
+            </div>
+            <div class="two">
+                <div class="head">Output</div>
+                <div id="absoutput">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="input" >
+            <div class="head">Logic</div>
+            <div class="code" id="abslogicbox" style="display: none;">
+                    <code style="color: blue;">
+                        <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;</pre>
+<pre id="absstep1" class="red">&lt;input type="text" id="number"&gt;
+&lt;button onclick=" myFunction() "&gt; Next &lt;/button&gt; </pre>
+
+<pre id="absstep6">&lt;p id="output"&gt;&lt;/p&gt;</pre>
+
+<pre id="absstep2">&lt;script&gt;
+  function myFunction() {</pre>
+<pre id="absstep4">    n= document.getElementById("number").value</pre>
+<pre id="absstep5">    document.getElementById("output").innerHTML = Math.abs(n);</pre>
+<pre id="absstep3">  }
+&lt;/script&gt;</pre>
+<pre>&lt;/body&gt;
+&lt;/html&gt;</pre>
+                        </pre>
+                    </code>
+                </div>
+        </div>
+        <div align="center" style="padding-bottom: 50px;padding-top: 20px;">
+                <button style="color:white; background-image:linear-gradient(#599bdc, #3072b3);padding-top:15px;width:200px;height:40px;padding-bottom: 25px;" onclick="gotosecondfrommath()">Try Another Function</button>
+            </div>
+    </section>
+
+<!-- End of Math.abs() -->
+
+<!-- Math.ceil() Start -->
+
+<section id="mathceil" style="display: none;">
+        <div class="head">Predefined Javascript Functions --> ceil()</div>
+        <div class="expl">
+            <button class="btn" id="ceildefine" type="button" name="button" onclick="ceildefinition()">Definition</button>
+            <button class="btn" id="ceilsyntax" type="button" name="button" onclick="ceilsyntax()">Syntax</button>
+            <div class="defi-para" id="ceildefi-para">The ceil() method rounds a number UPWARDS to the nearest integer, and returns the result.If the passed argument is an integer, the value will not be rounded.</div>
+            <div class="syntax-para" id="ceilsyntax-para">Math.ceil(x)</div>
+        </div>
+        <div class="cont">
+            <div class="one" align="center">
+                <div class="head">Input</div>
+                <div id="ceilbtnbox">
+                    <button class="btn2" onclick="ceilstart()">Start</button>
+                </div>
+                <div class="inputbox" id="ceilinputbox" style="display: none;">
+                <label class="label1"><b>Enter Number</b></label><br><br><input type="text" name="text" placeholder="Enter Number" class="entry" id="ceilentry"><br>
+                <div class="button">
+                    <button class="btn1" id="ceilnextbtn" onclick="ceilnext()">Next</button>
+                    <button class="btn1" id="ceilresetbtn" onclick="ceilreset()">Reset</button>
+                </div>
+               </div>
+            </div>
+            <div class="two">
+                <div class="head">Output</div>
+                <div id="ceiloutput">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="input" >
+            <div class="head">Logic</div>
+            <div class="code" id="ceillogicbox" style="display: none;">
+                    <code style="color: blue;">
+                        <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;</pre>
+<pre id="ceilstep1" class="red">&lt;input type="text" id="number"&gt;
+&lt;button onclick=" myFunction() "&gt; Next &lt;/button&gt; </pre>
+
+<pre id="ceilstep6">&lt;p id="output"&gt;&lt;/p&gt;</pre>
+
+<pre id="ceilstep2">&lt;script&gt;
+  function myFunction() {</pre>
+<pre id="ceilstep4">    n= document.getElementById("number").value</pre>
+<pre id="ceilstep5">    document.getElementById("output").innerHTML = Math.ceil(n);</pre>
+<pre id="ceilstep3">  }
+&lt;/script&gt;</pre>
+<pre>&lt;/body&gt;
+&lt;/html&gt;</pre>
+                        </pre>
+                    </code>
+                </div>
+        </div>
+        <div align="center" style="padding-bottom: 50px;padding-top: 20px;">
+                <button style="color:white; background-image:linear-gradient(#599bdc, #3072b3);padding-top:15px;width:200px;height:40px;padding-bottom: 25px;" onclick="gotosecondfrommath()">Try Another Function</button>
+            </div>
+    </section>
+
+<!-- End of ceil.abs() -->
+
+<!-- Math.floor() Start -->
+
+<section id="mathfloor" style="display: none;">
+        <div class="head">Predefined Javascript Functions --> floor()</div>
+        <div class="expl">
+            <button class="btn" id="floordefine" type="button" name="button" onclick="floordefinition()">Definition</button>
+            <button class="btn" id="floorsyntax" type="button" name="button" onclick="floorsyntax()">Syntax</button>
+            <div class="defi-para" id="floordefi-para">The floor() method rounds a number DOWNWARDS to the nearest integer, and returns the result.If the passed argument is an integer, the value will not be rounded.</div>
+            <div class="syntax-para" id="floorsyntax-para">Math.floor(x)</div>
+        </div>
+        <div class="cont">
+            <div class="one" align="center">
+                <div class="head">Input</div>
+                <div id="floorbtnbox">
+                    <button class="btn2" onclick="floorstart()">Start</button>
+                </div>
+                <div class="inputbox" id="floorinputbox" style="display: none;">
+                <label class="label1"><b>Enter Number</b></label><br><br><input type="text" name="text" placeholder="Enter Number" class="entry" id="floorentry"><br>
+                <div class="button">
+                    <button class="btn1" id="floornextbtn" onclick="floornext()">Next</button>
+                    <button class="btn1" id="floorresetbtn" onclick="floorreset()">Reset</button>
+                </div>
+               </div>
+            </div>
+            <div class="two">
+                <div class="head">Output</div>
+                <div id="flooroutput">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="input" >
+            <div class="head">Logic</div>
+            <div class="code" id="floorlogicbox" style="display: none;">
+                    <code style="color: blue;">
+                        <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;</pre>
+<pre id="floorstep1" class="red">&lt;input type="text" id="number"&gt;
+&lt;button onclick=" myFunction() "&gt; Next &lt;/button&gt; </pre>
+
+<pre id="floorstep6">&lt;p id="output"&gt;&lt;/p&gt;</pre>
+
+<pre id="floorstep2">&lt;script&gt;
+  function myFunction() {</pre>
+<pre id="floorstep4">    n= document.getElementById("number").value</pre>
+<pre id="floorstep5">    document.getElementById("output").innerHTML = Math.floor(n);</pre>
+<pre id="floorstep3">  }
+&lt;/script&gt;</pre>
+<pre>&lt;/body&gt;
+&lt;/html&gt;</pre>
+                        </pre>
+                    </code>
+                </div>
+        </div>
+        <div align="center" style="padding-bottom: 50px;padding-top: 20px;">
+                <button style="color:white; background-image:linear-gradient(#599bdc, #3072b3);padding-top:15px;width:200px;height:40px;padding-bottom: 25px;" onclick="gotosecondfrommath()">Try Another Function</button>
+            </div>
+    </section>
+
+<!-- End of Math.floor() -->
+
+<!-- Math.sin() Start -->
+
+<section id="mathsin" style="display: none;">
+        <div class="head">Predefined Javascript Functions --> sin()</div>
+        <div class="expl">
+            <button class="btn" id="sindefine" type="button" name="button" onclick="sindefinition()">Definition</button>
+            <button class="btn" id="sinsyntax" type="button" name="button" onclick="sinsyntax()">Syntax</button>
+            <div class="defi-para" id="sindefi-para">The sin() method returns the sine of a number.<br>Note: This method returns a value between -1 and 1, which represents the sine of the parameter x.</div>
+            <div class="syntax-para" id="sinsyntax-para">Math.sin(x)</div>
+        </div>
+        <div class="cont">
+            <div class="one" align="center">
+                <div class="head">Input</div>
+                <div id="sinbtnbox">
+                    <button class="btn2" onclick="sinstart()">Start</button>
+                </div>
+                <div class="inputbox" id="sininputbox" style="display: none;">
+                <label class="label1"><b>Enter Number</b></label><br><br><input type="text" name="text" placeholder="Enter Number" class="entry" id="sinentry"><br>
+                <div class="button">
+                    <button class="btn1" id="sinnextbtn" onclick="sinnext()">Next</button>
+                    <button class="btn1" id="sinresetbtn" onclick="sinreset()">Reset</button>
+                </div>
+               </div>
+            </div>
+            <div class="two">
+                <div class="head">Output</div>
+                <div id="sinoutput">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="input" >
+            <div class="head">Logic</div>
+            <div class="code" id="sinlogicbox" style="display: none;">
+                    <code style="color: blue;">
+                        <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;</pre>
+<pre id="sinstep1" class="red">&lt;input type="text" id="number"&gt;
+&lt;button onclick=" myFunction() "&gt; Next &lt;/button&gt; </pre>
+
+<pre id="sinstep6">&lt;p id="output"&gt;&lt;/p&gt;</pre>
+
+<pre id="sinstep2">&lt;script&gt;
+  function myFunction() {</pre>
+<pre id="sinstep4">    n= document.getElementById("number").value</pre>
+<pre id="sinstep5">    document.getElementById("output").innerHTML = Math.sin(n);</pre>
+<pre id="sinstep3">  }
+&lt;/script&gt;</pre>
+<pre>&lt;/body&gt;
+&lt;/html&gt;</pre>
+                        </pre>
+                    </code>
+                </div>
+        </div>
+        <div align="center" style="padding-bottom: 50px;padding-top: 20px;">
+                <button style="color:white; background-image:linear-gradient(#599bdc, #3072b3);padding-top:15px;width:200px;height:40px;padding-bottom: 25px;" onclick="gotosecondfrommath()">Try Another Function</button>
+            </div>
+    </section>
+
+<!-- End of Math.sin() -->
+
+<!-- Math.cos() Start -->
+
+<section id="mathcos" style="display: none;">
+        <div class="head">Predefined Javascript Functions --> cos()</div>
+        <div class="expl">
+            <button class="btn" id="cosdefine" type="button" name="button" onclick="cosdefinition()">Definition</button>
+            <button class="btn" id="cossyntax" type="button" name="button" onclick="cossyntax()">Syntax</button>
+            <div class="defi-para" id="cosdefi-para">The cos() method returns the cosine of a number.<br>Note: The cos() method returns a numeric value between -1 and 1, which represents the cosine of the angle.</div>
+            <div class="syntax-para" id="cossyntax-para">Math.cos(x)</div>
+        </div>
+        <div class="cont">
+            <div class="one" align="center">
+                <div class="head">Input</div>
+                <div id="cosbtnbox">
+                    <button class="btn2" onclick="cosstart()">Start</button>
+                </div>
+                <div class="inputbox" id="cosinputbox" style="display: none;">
+                <label class="label1"><b>Enter Number</b></label><br><br><input type="text" name="text" placeholder="Enter Number" class="entry" id="cosentry"><br>
+                <div class="button">
+                    <button class="btn1" id="cosnextbtn" onclick="cosnext()">Next</button>
+                    <button class="btn1" id="cosresetbtn" onclick="cosreset()">Reset</button>
+                </div>
+               </div>
+            </div>
+            <div class="two">
+                <div class="head">Output</div>
+                <div id="cosoutput">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="input" >
+            <div class="head">Logic</div>
+            <div class="code" id="coslogicbox" style="display: none;">
+                    <code style="color: blue;">
+                        <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;</pre>
+<pre id="cosstep1" class="red">&lt;input type="text" id="number"&gt;
+&lt;button onclick=" myFunction() "&gt; Next &lt;/button&gt; </pre>
+
+<pre id="cosstep6">&lt;p id="output"&gt;&lt;/p&gt;</pre>
+
+<pre id="cosstep2">&lt;script&gt;
+  function myFunction() {</pre>
+<pre id="cosstep4">    n= document.getElementById("number").value</pre>
+<pre id="cosstep5">    document.getElementById("output").innerHTML = Math.cos(n);</pre>
+<pre id="cosstep3">  }
+&lt;/script&gt;</pre>
+<pre>&lt;/body&gt;
+&lt;/html&gt;</pre>
+                        </pre>
+                    </code>
+                </div>
+        </div>
+        <div align="center" style="padding-bottom: 50px;padding-top: 20px;">
+                <button style="color:white; background-image:linear-gradient(#599bdc, #3072b3);padding-top:15px;width:200px;height:40px;padding-bottom: 25px;" onclick="gotosecondfrommath()">Try Another Function</button>
+            </div>
+    </section>
+
+<!-- End of Math.cos() -->
+
+<!-- Math.exp() Start -->
+
+<section id="mathexp" style="display: none;">
+        <div class="head">Predefined Javascript Functions --> exp()</div>
+        <div class="expl">
+            <button class="btn" id="expdefine" type="button" name="button" onclick="expdefinition()">Definition</button>
+            <button class="btn" id="expsyntax" type="button" name="button" onclick="expsyntax()">Syntax</button>
+            <div class="defi-para" id="expdefi-para">The exp() method returns the value of Ex, where E is Euler's number (approximately 2.7183) and x is the number passed to it.</div>
+            <div class="syntax-para" id="expsyntax-para">Math.exp(x)</div>
+        </div>
+        <div class="cont">
+            <div class="one" align="center">
+                <div class="head">Input</div>
+                <div id="expbtnbox">
+                    <button class="btn2" onclick="expstart()">Start</button>
+                </div>
+                <div class="inputbox" id="expinputbox" style="display: none;">
+                <label class="label1"><b>Enter Number</b></label><br><br><input type="text" name="text" placeholder="Enter Number" class="entry" id="expentry"><br>
+                <div class="button">
+                    <button class="btn1" id="expnextbtn" onclick="expnext()">Next</button>
+                    <button class="btn1" id="expresetbtn" onclick="expreset()">Reset</button>
+                </div>
+               </div>
+            </div>
+            <div class="two">
+                <div class="head">Output</div>
+                <div id="expoutput">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="input" >
+            <div class="head">Logic</div>
+            <div class="code" id="explogicbox" style="display: none;">
+                    <code style="color: blue;">
+                        <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;</pre>
+<pre id="expstep1" class="red">&lt;input type="text" id="number"&gt;
+&lt;button onclick=" myFunction() "&gt; Next &lt;/button&gt; </pre>
+
+<pre id="expstep6">&lt;p id="output"&gt;&lt;/p&gt;</pre>
+
+<pre id="expstep2">&lt;script&gt;
+  function myFunction() {</pre>
+<pre id="expstep4">    n= document.getElementById("number").value</pre>
+<pre id="expstep5">    document.getElementById("output").innerHTML = Math.exp(n);</pre>
+<pre id="expstep3">  }
+&lt;/script&gt;</pre>
+<pre>&lt;/body&gt;
+&lt;/html&gt;</pre>
+                        </pre>
+                    </code>
+                </div>
+        </div>
+        <div align="center" style="padding-bottom: 50px;padding-top: 20px;">
+                <button style="color:white; background-image:linear-gradient(#599bdc, #3072b3);padding-top:15px;width:200px;height:40px;padding-bottom: 25px;" onclick="gotosecondfrommath()">Try Another Function</button>
+            </div>
+    </section>
+
+<!-- End of Math.exp() -->
+
+<!-- Math.trunc() Start -->
+
+<section id="mathtrunc" style="display: none;">
+        <div class="head">Predefined Javascript Functions --> trunc()</div>
+        <div class="expl">
+            <button class="btn" id="truncdefine" type="button" name="button" onclick="truncdefinition()">Definition</button>
+            <button class="btn" id="truncsyntax" type="button" name="button" onclick="truncsyntax()">Syntax</button>
+            <div class="defi-para" id="truncdefi-para">The trunc() method returns the integer part of a number.<br>Note: This method will NOT round the number up/down to the nearest integer, but simply remove the decimals.</div>
+            <div class="syntax-para" id="truncsyntax-para">Math.trunc(x)</div>
+        </div>
+        <div class="cont">
+            <div class="one" align="center">
+                <div class="head">Input</div>
+                <div id="truncbtnbox">
+                    <button class="btn2" onclick="truncstart()">Start</button>
+                </div>
+                <div class="inputbox" id="truncinputbox" style="display: none;">
+                <label class="label1"><b>Enter Number:&nbsp;</b></label><input type="text" name="text" placeholder="Enter Number" class="entry" id="truncentry"><br>
+                <div class="button">
+                    <button class="btn1" id="truncnextbtn" onclick="truncnext()">Next</button>
+                    <button class="btn1" id="truncresetbtn" onclick="truncreset()">Reset</button>
+                </div>
+               </div>
+            </div>
+            <div class="two">
+                <div class="head">Output</div>
+                <div id="truncoutput">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="input" >
+            <div class="head">Logic</div>
+            <div class="code" id="trunclogicbox" style="display: none;">
+                    <code style="color: blue;">
+                        <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;</pre>
+<pre id="truncstep1" class="red">&lt;input type="text" id="number"&gt;
+&lt;button onclick=" myFunction() "&gt; Next &lt;/button&gt; </pre>
+
+<pre id="truncstep6">&lt;p id="output"&gt;&lt;/p&gt;</pre>
+
+<pre id="truncstep2">&lt;script&gt;
+  function myFunction() {</pre>
+<pre id="truncstep4">    n= document.getElementById("number").value</pre>
+<pre id="truncstep5">    document.getElementById("output").innerHTML = Math.trunc(n);</pre>
+<pre id="truncstep3">  }
+&lt;/script&gt;</pre>
+<pre>&lt;/body&gt;
+&lt;/html&gt;</pre>
+                        </pre>
+                    </code>
+                </div>
+        </div>
+        <div align="center" style="padding-bottom: 50px;padding-top: 20px;">
+                <button style="color:white; background-image:linear-gradient(#599bdc, #3072b3);padding-top:15px;width:200px;height:40px;padding-bottom: 25px;" onclick="gotosecondfrommath()">Try Another Function</button>
+            </div>
+    </section>
+
+<!-- End of Math.trunc() -->
 </body>
 </html>
