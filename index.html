@@ -689,7 +689,7 @@
                     <button class="btn2" onclick="charAtstart()">Start</button>
                 </div>
                 <div class="inputbox" id="charAtinputbox" style="display: none;">
-                <label class="label1"><b>Enter String:&nbsp;</b></label><input type="text" name="text" placeholder="Enter Number" class="entry" id="charAtentry"><br>
+                <label class="label1"><b>Enter String:&nbsp;</b></label><input type="text" name="text" placeholder="Enter String" class="entry" id="charAtentry"><br>
                 <label class="label1"><b>Enter Number:&nbsp;</b></label><input type="text" name="text" placeholder="Enter Number" class="entry" id="charAtentry1"><br>
                 <div class="button">
                     <button class="btn1" id="charAtnextbtn" onclick="charAtnext()">Next</button>
@@ -711,7 +711,8 @@
                         <pre>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;body&gt;</pre>
-<pre id="charAtstep1" class="red">&lt;input type="text" id="number"&gt;
+<pre id="charAtstep1" class="red">&lt;input type="text" id="string"&gt;
+&lt;input type="text" id="string1"&gt;
 &lt;button onclick=" myFunction() "&gt; Next &lt;/button&gt; </pre>
 
 <pre id="charAtstep6">&lt;p id="output"&gt;&lt;/p&gt;</pre>
@@ -753,8 +754,8 @@
                     <button class="btn2" onclick="concatstart()">Start</button>
                 </div>
                 <div class="inputbox" id="concatinputbox" style="display: none;">
-                <label class="label1"><b>First String :&nbsp;</b></label><input type="text" name="text" placeholder="Enter Number" class="entry" id="concatentry"><br>
-                <label class="label1"><b>Second String:&nbsp;</b></label><input type="text" name="text" placeholder="Enter Number" class="entry" id="concatentry1"><br>
+                <label class="label1"><b>First String :&nbsp;</b></label><input type="text" name="text" placeholder="Enter String" class="entry" id="concatentry"><br>
+                <label class="label1"><b>Second String:&nbsp;</b></label><input type="text" name="text" placeholder="Enter String" class="entry" id="concatentry1"><br>
                 <div class="button">
                     <button class="btn1" id="concatnextbtn" onclick="concatnext()">Next</button>
                     <button class="btn1" id="concatresetbtn" onclick="concatreset()">Reset</button>
@@ -775,7 +776,8 @@
                         <pre>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;body&gt;</pre>
-<pre id="concatstep1" class="red">&lt;input type="text" id="number"&gt;
+<pre id="concatstep1" class="red">&lt;input type="text" id="string"&gt;
+&lt;input type="text" id="string1"&gt;
 &lt;button onclick=" myFunction() "&gt; Next &lt;/button&gt; </pre>
 
 <pre id="concatstep6">&lt;p id="output"&gt;&lt;/p&gt;</pre>
@@ -817,8 +819,8 @@
                     <button class="btn2" onclick="repeatstart()">Start</button>
                 </div>
                 <div class="inputbox" id="repeatinputbox" style="display: none;">
-                <label class="label1"><b>First String :&nbsp;</b></label><input type="text" name="text" placeholder="Enter Number" class="entry" id="repeatentry"><br>
-                <label class="label1"><b>Second String:&nbsp;</b></label><input type="text" name="text" placeholder="Enter Number" class="entry" id="repeatentry1"><br>
+                <label class="label1"><b>Enter String :&nbsp;</b></label><input type="text" name="text" placeholder="Enter String" class="entry" id="repeatentry"><br>
+                <label class="label1"><b>Enter Number:&nbsp;</b></label><input type="text" name="text" placeholder="Enter Number" class="entry" id="repeatentry1"><br>
                 <div class="button">
                     <button class="btn1" id="repeatnextbtn" onclick="repeatnext()">Next</button>
                     <button class="btn1" id="repeatresetbtn" onclick="repeatreset()">Reset</button>
@@ -839,7 +841,8 @@
                         <pre>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;body&gt;</pre>
-<pre id="repeatstep1" class="red">&lt;input type="text" id="number"&gt;
+<pre id="repeatstep1" class="red">&lt;input type="text" id="string"&gt;
+&lt;input type="text" id="num"&gt;
 &lt;button onclick=" myFunction() "&gt; Next &lt;/button&gt; </pre>
 
 <pre id="repeatstep6">&lt;p id="output"&gt;&lt;/p&gt;</pre>
@@ -881,7 +884,7 @@
                     <button class="btn2" onclick="toLowerCasestart()">Start</button>
                 </div>
                 <div class="inputbox" id="toLowerCaseinputbox" style="display: none;">
-                <label class="label1"><b>Enter Number</b></label><br><br><input type="text" name="text" placeholder="Enter Number" class="entry" id="toLowerCaseentry"><br>
+                <label class="label1"><b>Enter String</b></label><br><br><input type="text" name="text" placeholder="Enter String" class="entry" id="toLowerCaseentry"><br>
                 <div class="button">
                     <button class="btn1" id="toLowerCasenextbtn" onclick="toLowerCasenext()">Next</button>
                     <button class="btn1" id="toLowerCaseresetbtn" onclick="toLowerCasereset()">Reset</button>
@@ -943,7 +946,7 @@
                     <button class="btn2" onclick="toUpperCasestart()">Start</button>
                 </div>
                 <div class="inputbox" id="toUpperCaseinputbox" style="display: none;">
-                <label class="label1"><b>Enter Number</b></label><br><br><input type="text" name="text" placeholder="Enter Number" class="entry" id="toUpperCaseentry"><br>
+                <label class="label1"><b>Enter String</b></label><br><br><input type="text" name="text" placeholder="Enter String" class="entry" id="toUpperCaseentry"><br>
                 <div class="button">
                     <button class="btn1" id="toUpperCasenextbtn" onclick="toUpperCasenext()">Next</button>
                     <button class="btn1" id="toUpperCaseresetbtn" onclick="toUpperCasereset()">Reset</button>
@@ -1004,7 +1007,7 @@
                     <button class="btn2" onclick="lengthstart()">Start</button>
                 </div>
                 <div class="inputbox" id="lengthinputbox" style="display: none;">
-                <label class="label1"><b>Enter Number</b></label><br><br><input type="text" name="text" placeholder="Enter Number" class="entry" id="lengthentry"><br>
+                <label class="label1"><b>Enter String</b></label><br><br><input type="text" name="text" placeholder="Enter String" class="entry" id="lengthentry"><br>
                 <div class="button">
                     <button class="btn1" id="lengthnextbtn" onclick="lengthnext()">Next</button>
                     <button class="btn1" id="lengthresetbtn" onclick="lengthreset()">Reset</button>

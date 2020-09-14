@@ -348,8 +348,22 @@ pre{
   width: 50%;
   height: 270px;
 }
+.two2{
+  color: blue;
+  overflow: scroll;
+}
+.two{
+  color: blue;
+  overflow: scroll;
+}
 .label1{
   font-size: 16px;
 }
+}
+.two2{
+  color: blue;
+}
+.two{
+  color: blue;
 }
 /* End of Final Page */
