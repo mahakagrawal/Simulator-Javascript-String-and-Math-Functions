@@ -90,32 +90,23 @@
         <section class="string-opening-section">
            <div class="string-selection">
                 <div class="choices2" align="center">
-                    <button class="string-choice1">
+                    <button class="string-choice1" onclick="stringcharAt()">
                         <h2>chatAt()</h2>
                     </button>
-                    <button class="string-choice1">
-                        <h2>charCodeAt()</h2>
-                    </button>
-                    <button class="string-choice1">
+                    <button class="string-choice1" onclick="stringconcat()">
                         <h2>concat()</h2>
                     </button>
-                    <button class="string-choice1">
-                        <h2>indexOf()</h2>
-                    </button>
-                    <button class="string-choice1">
+                    <button class="string-choice1" onclick="stringrepeat()">
                         <h2>repeat()</h2>
                     </button>
-                    <button class="string-choice1">
+                    <button class="string-choice1" onclick="stringtoLowerCase()">
                         <h2>toLowerCase()</h2>
                     </button>
-                    <button class="string-choice1">
+                    <button class="string-choice1" onclick="stringtoUpperCase()">
                         <h2>toUpperCase()</h2>
                     </button>
-                    <button class="string-choice1">
-                        <h2>valueOf()</h2>
-                    </button>
-                    <button class="string-choice1">
-                        <h2>trim()</h2>
+                    <button class="string-choice1" onclick="stringlength()">
+                        <h2>length</h2>
                     </button>
                 </div>
             </div>
@@ -680,5 +671,382 @@
     </section>
 
 <!-- End of Math.trunc() -->
+
+<!-- charAt() Start -->
+
+<section id="stringcharAt" style="display: none;">
+        <div class="head">Predefined Javascript Functions --> charAt()</div>
+        <div class="expl">
+            <button class="btn" id="charAtdefine" type="button" name="button" onclick="charAtdefinition()">Definition</button>
+            <button class="btn" id="charAtsyntax" type="button" name="button" onclick="charAtsyntax()">Syntax</button>
+            <div class="defi-para" id="charAtdefi-para">The charAt() method returns the character at the specified index in a string.<br>The index of the first character is 0, the second character is 1, and so on.</div>
+            <div class="syntax-para" id="charAtsyntax-para">str.charAt(x)</div>
+        </div>
+        <div class="cont">
+            <div class="one1" align="center">
+                <div class="head">Input</div>
+                <div id="charAtbtnbox">
+                    <button class="btn2" onclick="charAtstart()">Start</button>
+                </div>
+                <div class="inputbox" id="charAtinputbox" style="display: none;">
+                <label class="label1"><b>Enter String:&nbsp;</b></label><input type="text" name="text" placeholder="Enter Number" class="entry" id="charAtentry"><br>
+                <label class="label1"><b>Enter Number:&nbsp;</b></label><input type="text" name="text" placeholder="Enter Number" class="entry" id="charAtentry1"><br>
+                <div class="button">
+                    <button class="btn1" id="charAtnextbtn" onclick="charAtnext()">Next</button>
+                    <button class="btn1" id="charAtresetbtn" onclick="charAtreset()">Reset</button>
+                </div>
+               </div>
+            </div>
+            <div class="two2">
+                <div class="head">Output</div>
+                <div id="charAtoutput">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="input" >
+            <div class="head">Logic</div>
+            <div class="code" id="charAtlogicbox" style="display: none;">
+                    <code style="color: blue;">
+                        <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;</pre>
+<pre id="charAtstep1" class="red">&lt;input type="text" id="number"&gt;
+&lt;button onclick=" myFunction() "&gt; Next &lt;/button&gt; </pre>
+
+<pre id="charAtstep6">&lt;p id="output"&gt;&lt;/p&gt;</pre>
+
+<pre id="charAtstep2">&lt;script&gt;
+  function myFunction() {</pre>
+<pre id="charAtstep4">    str= document.getElementById("string").value;
+    n= document.getElementById("string1").value;</pre>
+<pre id="charAtstep5">    document.getElementById("output").innerHTML = str.charAt(n);</pre>
+<pre id="charAtstep3">  }
+&lt;/script&gt;</pre>
+<pre>&lt;/body&gt;
+&lt;/html&gt;</pre>
+                        </pre>
+                    </code>
+                </div>
+        </div>
+        <div align="center" style="padding-bottom: 50px;padding-top: 20px;">
+                <button style="color:white; background-image:linear-gradient(#599bdc, #3072b3);padding-top:15px;width:200px;height:40px;padding-bottom: 25px;" onclick="gotosecondfromstring()">Try Another Function</button>
+            </div>
+    </section>
+
+<!-- End of charAt() -->
+
+<!-- concat() Start -->
+
+<section id="stringconcat" style="display: none;">
+        <div class="head">Predefined Javascript Functions --> concat()</div>
+        <div class="expl">
+            <button class="btn" id="concatdefine" type="button" name="button" onclick="concatdefinition()">Definition</button>
+            <button class="btn" id="concatsyntax" type="button" name="button" onclick="concatsyntax()">Syntax</button>
+            <div class="defi-para" id="concatdefi-para">The concat() method is used to join two or more strings.<br>This method does not change the existing strings, but returns a new string containing the text of the joined strings.</div>
+            <div class="syntax-para" id="concatsyntax-para">str.concat(str1,str2,..,strn)</div>
+        </div>
+        <div class="cont">
+            <div class="one1" align="center">
+                <div class="head">Input</div>
+                <div id="concatbtnbox">
+                    <button class="btn2" onclick="concatstart()">Start</button>
+                </div>
+                <div class="inputbox" id="concatinputbox" style="display: none;">
+                <label class="label1"><b>First String :&nbsp;</b></label><input type="text" name="text" placeholder="Enter Number" class="entry" id="concatentry"><br>
+                <label class="label1"><b>Second String:&nbsp;</b></label><input type="text" name="text" placeholder="Enter Number" class="entry" id="concatentry1"><br>
+                <div class="button">
+                    <button class="btn1" id="concatnextbtn" onclick="concatnext()">Next</button>
+                    <button class="btn1" id="concatresetbtn" onclick="concatreset()">Reset</button>
+                </div>
+               </div>
+            </div>
+            <div class="two2">
+                <div class="head">Output</div>
+                <div id="concatoutput">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="input" >
+            <div class="head">Logic</div>
+            <div class="code" id="concatlogicbox" style="display: none;">
+                    <code style="color: blue;">
+                        <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;</pre>
+<pre id="concatstep1" class="red">&lt;input type="text" id="number"&gt;
+&lt;button onclick=" myFunction() "&gt; Next &lt;/button&gt; </pre>
+
+<pre id="concatstep6">&lt;p id="output"&gt;&lt;/p&gt;</pre>
+
+<pre id="concatstep2">&lt;script&gt;
+  function myFunction() {</pre>
+<pre id="concatstep4">    str= document.getElementById("string").value;
+    str1= document.getElementById("string1").value;</pre>
+<pre id="concatstep5">    document.getElementById("output").innerHTML = str.concat(str1);</pre>
+<pre id="concatstep3">  }
+&lt;/script&gt;</pre>
+<pre>&lt;/body&gt;
+&lt;/html&gt;</pre>
+                        </pre>
+                    </code>
+                </div>
+        </div>
+        <div align="center" style="padding-bottom: 50px;padding-top: 20px;">
+                <button style="color:white; background-image:linear-gradient(#599bdc, #3072b3);padding-top:15px;width:200px;height:40px;padding-bottom: 25px;" onclick="gotosecondfromstring()">Try Another Function</button>
+            </div>
+    </section>
+
+<!-- End of concat() -->
+
+<!-- repeat() Start -->
+
+<section id="stringrepeat" style="display: none;">
+        <div class="head">Predefined Javascript Functions --> repeat()</div>
+        <div class="expl">
+            <button class="btn" id="repeatdefine" type="button" name="button" onclick="repeatdefinition()">Definition</button>
+            <button class="btn" id="repeatsyntax" type="button" name="button" onclick="repeatsyntax()">Syntax</button>
+            <div class="defi-para" id="repeatdefi-para">The repeat() method returns a new string with a specified number of copies of the string it was called on.</div>
+            <div class="syntax-para" id="repeatsyntax-para">str.repeat(x)</div>
+        </div>
+        <div class="cont">
+            <div class="one1" align="center">
+                <div class="head">Input</div>
+                <div id="repeatbtnbox">
+                    <button class="btn2" onclick="repeatstart()">Start</button>
+                </div>
+                <div class="inputbox" id="repeatinputbox" style="display: none;">
+                <label class="label1"><b>First String :&nbsp;</b></label><input type="text" name="text" placeholder="Enter Number" class="entry" id="repeatentry"><br>
+                <label class="label1"><b>Second String:&nbsp;</b></label><input type="text" name="text" placeholder="Enter Number" class="entry" id="repeatentry1"><br>
+                <div class="button">
+                    <button class="btn1" id="repeatnextbtn" onclick="repeatnext()">Next</button>
+                    <button class="btn1" id="repeatresetbtn" onclick="repeatreset()">Reset</button>
+                </div>
+               </div>
+            </div>
+            <div class="two2">
+                <div class="head">Output</div>
+                <div id="repeatoutput">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="input" >
+            <div class="head">Logic</div>
+            <div class="code" id="repeatlogicbox" style="display: none;">
+                    <code style="color: blue;">
+                        <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;</pre>
+<pre id="repeatstep1" class="red">&lt;input type="text" id="number"&gt;
+&lt;button onclick=" myFunction() "&gt; Next &lt;/button&gt; </pre>
+
+<pre id="repeatstep6">&lt;p id="output"&gt;&lt;/p&gt;</pre>
+
+<pre id="repeatstep2">&lt;script&gt;
+  function myFunction() {</pre>
+<pre id="repeatstep4">    str= document.getElementById("string").value;
+    n= document.getElementById("num").value;</pre>
+<pre id="repeatstep5">    document.getElementById("output").innerHTML = str.repeat(n);</pre>
+<pre id="repeatstep3">  }
+&lt;/script&gt;</pre>
+<pre>&lt;/body&gt;
+&lt;/html&gt;</pre>
+                        </pre>
+                    </code>
+                </div>
+        </div>
+        <div align="center" style="padding-bottom: 50px;padding-top: 20px;">
+                <button style="color:white; background-image:linear-gradient(#599bdc, #3072b3);padding-top:15px;width:200px;height:40px;padding-bottom: 25px;" onclick="gotosecondfromstring()">Try Another Function</button>
+            </div>
+    </section>
+
+<!-- End of repeat() -->
+
+<!-- string.toLowerCase() Start -->
+
+<section id="stringtoLowerCase" style="display: none;">
+        <div class="head">Predefined Javascript Functions --> toLowerCase()</div>
+        <div class="expl">
+            <button class="btn" id="toLowerCasedefine" type="button" name="button" onclick="toLowerCasedefinition()">Definition</button>
+            <button class="btn" id="toLowerCasesyntax" type="button" name="button" onclick="toLowerCasesyntax()">Syntax</button>
+            <div class="defi-para" id="toLowerCasedefi-para">The toLowerCase() method converts a string to lowercase letters.<br>Note: The toLowerCase() method does not change the original string.</div>
+            <div class="syntax-para" id="toLowerCasesyntax-para">string.toLowerCase()</div>
+        </div>
+        <div class="cont">
+            <div class="one" align="center">
+                <div class="head">Input</div>
+                <div id="toLowerCasebtnbox">
+                    <button class="btn2" onclick="toLowerCasestart()">Start</button>
+                </div>
+                <div class="inputbox" id="toLowerCaseinputbox" style="display: none;">
+                <label class="label1"><b>Enter Number</b></label><br><br><input type="text" name="text" placeholder="Enter Number" class="entry" id="toLowerCaseentry"><br>
+                <div class="button">
+                    <button class="btn1" id="toLowerCasenextbtn" onclick="toLowerCasenext()">Next</button>
+                    <button class="btn1" id="toLowerCaseresetbtn" onclick="toLowerCasereset()">Reset</button>
+                </div>
+               </div>
+            </div>
+            <div class="two">
+                <div class="head">Output</div>
+                <div id="toLowerCaseoutput">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="input" >
+            <div class="head">Logic</div>
+            <div class="code" id="toLowerCaselogicbox" style="display: none;">
+                    <code style="color: blue;">
+                        <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;</pre>
+<pre id="toLowerCasestep1" class="red">&lt;input type="text" id="string"&gt;
+&lt;button onclick=" myFunction() "&gt; Next &lt;/button&gt; </pre>
+
+<pre id="toLowerCasestep6">&lt;p id="output"&gt;&lt;/p&gt;</pre>
+
+<pre id="toLowerCasestep2">&lt;script&gt;
+  function myFunction() {</pre>
+<pre id="toLowerCasestep4">    str= document.getElementById("string").value</pre>
+<pre id="toLowerCasestep5">    document.getElementById("output").innerHTML = str.toLowerCase();</pre>
+<pre id="toLowerCasestep3">  }
+&lt;/script&gt;</pre>
+<pre>&lt;/body&gt;
+&lt;/html&gt;</pre>
+                        </pre>
+                    </code>
+                </div>
+        </div>
+        <div align="center" style="padding-bottom: 50px;padding-top: 20px;">
+                <button style="color:white; background-image:linear-gradient(#599bdc, #3072b3);padding-top:15px;width:200px;height:40px;padding-bottom: 25px;" onclick="gotosecondfromstring()">Try Another Function</button>
+            </div>
+    </section>
+
+<!-- End of string.toLowerCase() -->
+
+<!-- string.toUpperCase() Start -->
+
+<section id="stringtoUpperCase" style="display: none;">
+        <div class="head">Predefined Javascript Functions --> toUpperCase()</div>
+        <div class="expl">
+            <button class="btn" id="toUpperCasedefine" type="button" name="button" onclick="toUpperCasedefinition()">Definition</button>
+            <button class="btn" id="toUpperCasesyntax" type="button" name="button" onclick="toUpperCasesyntax()">Syntax</button>
+            <div class="defi-para" id="toUpperCasedefi-para">The toUpperCase() method converts a string to uppercase letters.<br>Note: The toUpperCase() method does not change the original string.</div>
+            <div class="syntax-para" id="toUpperCasesyntax-para">string.toUpperCase()</div>
+        </div>
+        <div class="cont">
+            <div class="one" align="center">
+                <div class="head">Input</div>
+                <div id="toUpperCasebtnbox">
+                    <button class="btn2" onclick="toUpperCasestart()">Start</button>
+                </div>
+                <div class="inputbox" id="toUpperCaseinputbox" style="display: none;">
+                <label class="label1"><b>Enter Number</b></label><br><br><input type="text" name="text" placeholder="Enter Number" class="entry" id="toUpperCaseentry"><br>
+                <div class="button">
+                    <button class="btn1" id="toUpperCasenextbtn" onclick="toUpperCasenext()">Next</button>
+                    <button class="btn1" id="toUpperCaseresetbtn" onclick="toUpperCasereset()">Reset</button>
+                </div>
+               </div>
+            </div>
+            <div class="two">
+                <div class="head">Output</div>
+                <div id="toUpperCaseoutput">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="input" >
+            <div class="head">Logic</div>
+            <div class="code" id="toUpperCaselogicbox" style="display: none;">
+                    <code style="color: blue;">
+                        <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;</pre>
+<pre id="toUpperCasestep1" class="red">&lt;input type="text" id="string"&gt;
+&lt;button onclick=" myFunction() "&gt; Next &lt;/button&gt; </pre>
+
+<pre id="toUpperCasestep6">&lt;p id="output"&gt;&lt;/p&gt;</pre>
+
+<pre id="toUpperCasestep2">&lt;script&gt;
+  function myFunction() {</pre>
+<pre id="toUpperCasestep4">    str= document.getElementById("string").value</pre>
+<pre id="toUpperCasestep5">    document.getElementById("output").innerHTML = str.toUpperCase();</pre>
+<pre id="toUpperCasestep3">  }
+&lt;/script&gt;</pre>
+<pre>&lt;/body&gt;
+&lt;/html&gt;</pre>
+                        </pre>
+                    </code>
+                </div>
+        </div>
+        <div align="center" style="padding-bottom: 50px;padding-top: 20px;">
+                <button style="color:white; background-image:linear-gradient(#599bdc, #3072b3);padding-top:15px;width:200px;height:40px;padding-bottom: 25px;" onclick="gotosecondfromstring()">Try Another Function</button>
+            </div>
+    </section>
+
+<!-- End of string.toUpperCase() -->
+<!-- string.length() Start -->
+
+<section id="stringlength" style="display: none;">
+        <div class="head">Predefined Javascript Functions --> length()</div>
+        <div class="expl">
+            <button class="btn" id="lengthdefine" type="button" name="button" onclick="lengthdefinition()">Definition</button>
+            <button class="btn" id="lengthsyntax" type="button" name="button" onclick="lengthsyntax()">Syntax</button>
+            <div class="defi-para" id="lengthdefi-para">The length property returns the length of a string (number of characters).<br>The length of an empty string is 0.</div>
+            <div class="syntax-para" id="lengthsyntax-para">string.length</div>
+        </div>
+        <div class="cont">
+            <div class="one" align="center">
+                <div class="head">Input</div>
+                <div id="lengthbtnbox">
+                    <button class="btn2" onclick="lengthstart()">Start</button>
+                </div>
+                <div class="inputbox" id="lengthinputbox" style="display: none;">
+                <label class="label1"><b>Enter Number</b></label><br><br><input type="text" name="text" placeholder="Enter Number" class="entry" id="lengthentry"><br>
+                <div class="button">
+                    <button class="btn1" id="lengthnextbtn" onclick="lengthnext()">Next</button>
+                    <button class="btn1" id="lengthresetbtn" onclick="lengthreset()">Reset</button>
+                </div>
+               </div>
+            </div>
+            <div class="two">
+                <div class="head">Output</div>
+                <div id="lengthoutput">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="input" >
+            <div class="head">Logic</div>
+            <div class="code" id="lengthlogicbox" style="display: none;">
+                    <code style="color: blue;">
+                        <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;</pre>
+<pre id="lengthstep1" class="red">&lt;input type="text" id="string"&gt;
+&lt;button onclick=" myFunction() "&gt; Next &lt;/button&gt; </pre>
+
+<pre id="lengthstep6">&lt;p id="output"&gt;&lt;/p&gt;</pre>
+
+<pre id="lengthstep2">&lt;script&gt;
+  function myFunction() {</pre>
+<pre id="lengthstep4">    str= document.getElementById("string").value</pre>
+<pre id="lengthstep5">    document.getElementById("output").innerHTML = str.length;</pre>
+<pre id="lengthstep3">  }
+&lt;/script&gt;</pre>
+<pre>&lt;/body&gt;
+&lt;/html&gt;</pre>
+                        </pre>
+                    </code>
+                </div>
+        </div>
+        <div align="center" style="padding-bottom: 50px;padding-top: 20px;">
+                <button style="color:white; background-image:linear-gradient(#599bdc, #3072b3);padding-top:15px;width:200px;height:40px;padding-bottom: 25px;" onclick="gotosecondfromstring()">Try Another Function</button>
+            </div>
+    </section>
+
+<!-- End of string.length() -->
 </body>
 </html>

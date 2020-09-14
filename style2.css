@@ -115,7 +115,7 @@ h1{
     text-align: center;
     text-shadow:  -1px -1px 0 rgba(0,0,0,0.3);
     height: 200px;
-    transition: width 0.8s, height 0.8s;
+    transition: width 2s, height 1s;
     font-size: 15px;
 }
 .math-choice1:hover{
@@ -157,7 +157,7 @@ h1{
     text-align: center;
     text-shadow:  -1px -1px 0 rgba(0,0,0,0.3);
     height: 200px;
-    transition: width 0.8s, height 0.8s;
+    transition: width 2s, height 1s;
     font-size: 15px;
 }
 .string-choice1:hover{
@@ -332,24 +332,5 @@ pre{
 .code{
     padding-left: 25px;
     padding-top: 10px;
-}
-.one1 , .two2 {
-  margin: 0% 1%;
-  box-shadow: 0px 5px 5px rgba(0,0,0,0.2);
-  border: 1px solid rgb(248,248,248);
-  width: 50%;
-  height: 220px;
-}
-@media (max-width: 600px) {
-   .one1 , .two2 {
-  margin: 0% 1%;
-  box-shadow: 0px 5px 5px rgba(0,0,0,0.2);
-  border: 1px solid rgb(248,248,248);
-  width: 50%;
-  height: 270px;
-}
-.label1{
-  font-size: 16px;
-}
 }
 /* End of Final Page */
