@@ -1,2 +1,2 @@
 Simulator
-Virtal Laboratory (Topic - Javascript String & Maths Functions)
+Virtual Laboratory (Topic - Javascript String & Maths Functions)
