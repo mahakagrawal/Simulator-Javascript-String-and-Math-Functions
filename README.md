@@ -1,2 +1,2 @@
-# Simulator1
-Fibbonacci Series
+Simulator
+Virtal Laboratory (Topic - Javascript String & Maths Functions)
